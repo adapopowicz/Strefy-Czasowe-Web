@@ -2,13 +2,17 @@
 
 import { motion } from 'framer-motion'
 
+interface MenuProps {
+  onNavClick: (sectionId: string) => void
+}
+
 const navItems = [
-  { label: 'BILETY', href: '#bilety' },
-  { label: 'LINE-UP', href: '#lineup' },
-  { label: 'KONTAKT', href: '#kontakt' },
+  { label: 'BILETY',   sectionId: 'bilety' },
+  { label: 'LINE-UP',  sectionId: 'lineup' },
+  { label: 'KONTAKT',  sectionId: 'kontakt' },
 ]
 
-export default function Menu() {
+export default function Menu({ onNavClick }: MenuProps) {
   return (
     <motion.nav
       className="fixed top-0 left-0 right-0 z-50 flex items-center gap-2 px-6 py-4"
@@ -17,41 +21,28 @@ export default function Menu() {
       transition={{ duration: 0.5 }}
     >
       {navItems.map((item) => (
-        <a
+        <button
           key={item.label}
-          href={item.href}
+          onClick={() => onNavClick(item.sectionId)}
           style={{
-            display: 'inline-block',
-            border: '1px solid rgba(139,150,138,0.35)',
+            border: 'none',
             borderRadius: '999px',
-            padding: '5px 16px',
+            padding: '4px 14px',
             fontFamily: 'var(--font-mono)',
-            fontSize: '24px',
+            fontSize: '18px',
             fontWeight: 400,
             letterSpacing: '0.08em',
-            color: '#E8E8E8',
-            background: 'rgba(32,13,10,0.68)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            textDecoration: 'none',
-            textTransform: 'uppercase' as const,
-            transition: 'all 0.2s',
+            color: '#1A280A',
+            background: '#90A981',
+            cursor: 'pointer',
+            textTransform: 'uppercase',
+            transition: 'background 0.2s',
           }}
-          onMouseEnter={e => {
-            const el = e.target as HTMLElement
-            el.style.background = 'rgba(36,56,13,0.88)'
-            el.style.borderColor = 'rgba(164,247,130,0.5)'
-            el.style.color = '#A4F782'
-          }}
-          onMouseLeave={e => {
-            const el = e.target as HTMLElement
-            el.style.background = 'rgba(32,13,10,0.68)'
-            el.style.borderColor = 'rgba(139,150,138,0.35)'
-            el.style.color = '#E8E8E8'
-          }}
+          onMouseEnter={e => { (e.target as HTMLElement).style.background = '#A4F782' }}
+          onMouseLeave={e => { (e.target as HTMLElement).style.background = '#90A981' }}
         >
           {item.label}
-        </a>
+        </button>
       ))}
     </motion.nav>
   )

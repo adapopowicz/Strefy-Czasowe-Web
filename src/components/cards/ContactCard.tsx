@@ -12,7 +12,7 @@ export default function ContactCard() {
   return (
     <motion.div
       className="card"
-      style={{ width: '250px', borderRadius: '14px', padding: '20px' }}
+      style={{ width: '320px', borderRadius: '16px', padding: '28px' }}
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}
     >

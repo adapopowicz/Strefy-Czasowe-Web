@@ -32,7 +32,7 @@ export default function HomepageContent() {
   return (
     <div
       className="relative w-full h-full flex flex-col items-center justify-center"
-      style={{ paddingTop: '60px', paddingBottom: '160px' }}
+      style={{ paddingTop: '60px', paddingBottom: '144px' }}
     >
       {/* Pink ellipse SVG — dome rising from below, behind text */}
       <img
@@ -40,7 +40,7 @@ export default function HomepageContent() {
         alt=""
         className="absolute pointer-events-none"
         style={{
-          width: '80vw',
+          width: '72vw',
           left: '50%',
           top: '6vh',
           transform: 'translateX(-50%)',
@@ -48,17 +48,17 @@ export default function HomepageContent() {
         }}
       />
 
-      {/* Date + Location — two lines, above title */}
+      {/* Date + Location — two lines, sits just above title */}
       <motion.p
         className="relative z-10 text-center"
         style={{
           fontFamily: 'var(--font-mono)',
           fontWeight: 400,
-          fontSize: '28px',
+          fontSize: '25px',
           color: '#90A981',
           letterSpacing: '0.04em',
-          lineHeight: 1.3,
-          marginBottom: '16px',
+          lineHeight: 0.9,
+          marginBottom: '4px',
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -71,15 +71,15 @@ export default function HomepageContent() {
 
       {/* Main title */}
       <motion.h1
-        className="relative z-10 text-center leading-none"
+        className="relative z-10 text-center"
         style={{
           fontFamily: 'var(--font-display)',
           fontWeight: 400,
-          fontSize: '260px',
+          fontSize: '234px',
           color: '#A4F782',
           letterSpacing: '-0.01em',
-          lineHeight: 0.88,
-          textShadow: '0 4px 32px rgba(164,247,130,0.45), 0 8px 48px rgba(0,0,0,0.5)',
+          lineHeight: 0.9,
+          textShadow: '0 0 10px rgba(0,0,0,0.5)',
         }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -92,13 +92,13 @@ export default function HomepageContent() {
 
       {/* Subtitle */}
       <motion.p
-        className="relative z-10 text-center mt-6"
+        className="relative z-10 text-center mt-5"
         style={{
           fontFamily: 'var(--font-sans)',
           fontWeight: 400,
-          fontSize: '50px',
+          fontSize: '45px',
           color: '#E8E8E8',
-          lineHeight: 1.2,
+          lineHeight: 0.9,
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -115,10 +115,10 @@ export default function HomepageContent() {
         style={{
           fontFamily: 'var(--font-mono)',
           fontWeight: 400,
-          fontSize: '28px',
+          fontSize: '18px',
           color: '#8B968A',
           letterSpacing: '0.02em',
-          lineHeight: 1.5,
+          lineHeight: 0.9,
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

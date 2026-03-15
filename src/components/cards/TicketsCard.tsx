@@ -14,7 +14,7 @@ export default function TicketsCard() {
   return (
     <motion.div
       className="card overflow-hidden"
-      style={{ width: '290px', borderRadius: '14px' }}
+      style={{ width: '370px', borderRadius: '16px' }}
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}
     >

@@ -6,12 +6,12 @@ export default function ArtistCard() {
   return (
     <motion.div
       className="card overflow-hidden"
-      style={{ width: '210px', borderRadius: '14px' }}
+      style={{ width: '280px', borderRadius: '16px' }}
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.2 }}
     >
       {/* Photo placeholder */}
-      <div className="relative overflow-hidden" style={{ height: '210px' }}>
+      <div className="relative overflow-hidden" style={{ height: '280px' }}>
         <div className="absolute inset-0" style={{ background: 'linear-gradient(160deg, #200D0A 0%, #1A280A 50%, #24380D 100%)' }} />
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 210 210" fill="none">
           <circle cx="105" cy="78" r="30" fill="rgba(164,247,130,0.04)" stroke="rgba(164,247,130,0.08)" strokeWidth="1" />
