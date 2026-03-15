@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'URWClassico';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/urwclassico-webfont/URWClassico-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'URWClassico';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/urwclassico-webfont/URWClassico-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'URWClassico';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/urwclassico-webfont/URWClassico-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'URWClassico';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/urwclassico-webfont/URWClassico-BoldItalic.woff') format('woff');
+}
+
+:root {
+  --neon-green: #A4F782;
+  --neon-green-dim: #90A981;
+  --deep-black: #200D0A;
+  --dark-bg: #1A280A;
+  --pink-glow: #FCA0EB;
+  --card-border: #24380D;
+  --card-bg: rgba(26, 40, 10, 0.88);
+  --font-display: 'URWClassico', serif;
+  --font-mono: 'URWClassico', serif;
+  --font-sans: 'URWClassico', serif;
+
+  /* Full palette */
+  --color-green: #A4F782;
+  --color-pink: #FCA0EB;
+  --color-bland-green: #90A981;
+  --color-light-blue: #98B5FC;
+  --color-brown: #3E2D14;
+  --color-off-white: #E8E8E8;
+  --color-dark-green-sec: #24380D;
+  --color-dark-brown: #200D0A;
+  --color-grey: #D3D3D3;
+  --color-dark-yellow-ter: #9E9626;
+  --color-dark-green-ter: #1A280A;
+  --color-dark-yellow-sec: #CCC12C;
+  --color-orange: #FF4F23;
+  --color-dark-blue: #477F9C;
+  --color-winter-green: #8B968A;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--deep-black);
+  color: var(--neon-green);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--deep-black); }
+::-webkit-scrollbar-thumb { background: var(--color-dark-green-sec); border-radius: 2px; }
+
+.neon-glow {
+  text-shadow:
+    0 0 40px rgba(164, 247, 130, 0.3),
+    0 0 80px rgba(164, 247, 130, 0.1);
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.pill-btn {
+  display: inline-block;
+  border: 1px solid var(--neon-green);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--neon-green);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.pill-btn:hover {
+  background: var(--neon-green);
+  color: var(--dark-bg);
+}
