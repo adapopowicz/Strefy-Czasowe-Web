@@ -1,0 +1,24 @@
+import type { Metadata } from 'next'
+import './globals.css'
+
+export const metadata: Metadata = {
+  title: 'Strefy Czasowe',
+  description: 'Indoorowy festiwal muzyczno-wizualny odbywający się w noce zmiany czasu.',
+  openGraph: {
+    title: 'Strefy Czasowe',
+    description: 'Indoorowy festiwal muzyczno-wizualny odbywający się w noce zmiany czasu.',
+    type: 'website',
+  },
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="pl">
+      <body>{children}</body>
+    </html>
+  )
+}
