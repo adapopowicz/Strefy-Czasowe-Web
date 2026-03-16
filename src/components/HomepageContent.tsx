@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 // March 28 2026 at 19:00 Warsaw time (CET = UTC+1, before DST change on Mar 29)
@@ -49,87 +48,75 @@ export default function HomepageContent() {
       />
 
       {/* Date + Location — two lines, sits just above title */}
-      <motion.p
+      <p
         className="relative z-10 text-center"
         style={{
           fontFamily: 'var(--font-mono)',
           fontWeight: 400,
-          fontSize: '25px',
-          color: '#90A981',
+          fontSize: 'clamp(13px, 1.74vw, 25px)',
+          color: '#24380D',
           letterSpacing: '0.04em',
           lineHeight: 0.9,
           marginBottom: '4px',
         }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.1 }}
       >
         28.03.2026
         <br />
         SVERA Gdynia
-      </motion.p>
+      </p>
 
       {/* Main title */}
-      <motion.h1
+      <h1
         className="relative z-10 text-center"
         style={{
           fontFamily: 'var(--font-display)',
           fontWeight: 400,
-          fontSize: '234px',
+          fontSize: 'clamp(52px, 16.25vw, 234px)',
           color: '#A4F782',
           letterSpacing: '-0.01em',
           lineHeight: 0.9,
           textShadow: '0 0 10px rgba(0,0,0,0.5)',
         }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
       >
         STREFY
         <br />
         CZASOWE
-      </motion.h1>
+      </h1>
 
       {/* Subtitle */}
-      <motion.p
+      <p
         className="relative z-10 text-center mt-5"
         style={{
           fontFamily: 'var(--font-sans)',
           fontWeight: 400,
-          fontSize: '45px',
+          fontSize: 'clamp(16px, 3.125vw, 45px)',
           color: '#E8E8E8',
           lineHeight: 0.9,
         }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
       >
         Indoorowy festiwal muzyczno-wizualny
         <br />
         odbywający się w noce zmiany czasu.
-      </motion.p>
+      </p>
 
       {/* Countdown */}
-      <motion.p
+      <p
         className="relative z-10 text-center mt-4"
         style={{
           fontFamily: 'var(--font-mono)',
           fontWeight: 400,
-          fontSize: '18px',
+          fontSize: 'clamp(13px, 1.67vw, 24px)',
           color: '#8B968A',
           letterSpacing: '0.02em',
           lineHeight: 0.9,
         }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
       >
         Do zmiany czasu na letni pozostało
         <br />
         <span style={{ color: '#A4F782' }}>
           {days} dni {hours} godzin {minutes} minut {seconds} sekund
         </span>
-      </motion.p>
+      </p>
     </div>
   )
 }
