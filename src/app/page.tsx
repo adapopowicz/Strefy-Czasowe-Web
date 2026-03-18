@@ -33,19 +33,19 @@ export default function Home() {
   }
 
   // Homepage blurs but stays partially visible as background
-  const homepageOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.3])
-  const homepageScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95])
-  const homepageBlurRaw = useTransform(scrollYProgress, [0, 0.4], [0, 18])
+  const homepageOpacity = useTransform(scrollYProgress, [0, 0.20], [1, 0.3])
+  const homepageScale = useTransform(scrollYProgress, [0, 0.20], [1, 0.95])
+  const homepageBlurRaw = useTransform(scrollYProgress, [0, 0.15], [0, 18])
   const homepageFilter = useTransform(homepageBlurRaw, (v) => `blur(${v}px)`)
 
-  // Scroll elements fade in — each card handles its own y entry animation
-  const scrollElementsOpacity = useTransform(scrollYProgress, [0.36, 0.50], [0, 1])
+  // Scroll elements fade in simultaneously with blur
+  const scrollElementsOpacity = useTransform(scrollYProgress, [0, 0.06], [0, 1])
 
   return (
     <>
       <Background />
       <Menu onNavClick={focusSection} />
-      <Timeline />
+      <div className="hidden md:block"><Timeline /></div>
 
       {/* Scroll driver */}
       <div

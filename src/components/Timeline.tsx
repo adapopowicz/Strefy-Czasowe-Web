@@ -55,6 +55,15 @@ export default function Timeline() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.3 }}
     >
+      {/* Gradient fade: transparent top → neon green bottom */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        top: '-20px',
+        background: 'linear-gradient(to bottom, transparent, #A4F782)',
+        pointerEvents: 'none',
+        zIndex: -1,
+      }} />
       <div className="relative w-full px-8 pb-3">
 
         {/* Spring logo — left edge at March 28 day-accurate position */}
@@ -104,9 +113,7 @@ export default function Timeline() {
 
         {/* Month labels */}
         <div className="flex justify-between">
-          {months.map((month, i) => {
-            const now = new Date()
-            const isCurrent = i === now.getMonth()
+          {months.map((month) => {
             return (
               <span key={month} style={{
                 fontFamily: 'var(--font-mono)',
@@ -114,7 +121,7 @@ export default function Timeline() {
                 fontSize: '22px',
                 letterSpacing: '0.04em',
                 lineHeight: 1,
-                color: isCurrent ? '#A4F782' : '#24380D',
+                color: '#24380D',
               }}>
                 {month}
               </span>

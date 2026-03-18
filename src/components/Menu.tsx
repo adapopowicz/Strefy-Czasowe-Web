@@ -15,7 +15,7 @@ const navItems = [
 export default function Menu({ onNavClick }: MenuProps) {
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 flex items-center gap-2 px-6 py-4"
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center md:justify-start gap-2 px-6 py-4"
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}

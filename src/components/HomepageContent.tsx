@@ -35,9 +35,9 @@ export default function HomepageContent() {
     >
       {/* Pink ellipse SVG — dome rising from below, behind text */}
       <img
-        src="/images/pink_ellipse.svg"
+        src="/images/background_ellipse.svg"
         alt=""
-        className="absolute pointer-events-none"
+        className="absolute pointer-events-none sm:[clip-path:inset(0_0_15%_0)] md:[clip-path:inset(0_0_30%_0)] lg:[clip-path:inset(0_0_45%_0)] xl:[clip-path:inset(0_0_50%_0)]"
         style={{
           width: '72vw',
           left: '50%',
@@ -47,23 +47,19 @@ export default function HomepageContent() {
         }}
       />
 
-      {/* Date + Location — two lines, sits just above title */}
-      <p
-        className="relative z-10 text-center"
+      {/* Date + location badge — upper right corner */}
+      <img
+        src="/images/date_time.svg"
+        alt="28.03.2026 · SVERA Gdynia"
+        className="absolute pointer-events-none"
         style={{
-          fontFamily: 'var(--font-mono)',
-          fontWeight: 400,
-          fontSize: 'clamp(13px, 1.74vw, 25px)',
-          color: '#24380D',
-          letterSpacing: '0.04em',
-          lineHeight: 0.9,
-          marginBottom: '4px',
+          top: '72px',
+          right: '24px',
+          width: 'clamp(140px, 14vw, 224px)',
+          height: 'auto',
+          zIndex: 10,
         }}
-      >
-        28.03.2026
-        <br />
-        SVERA Gdynia
-      </p>
+      />
 
       {/* Main title */}
       <h1

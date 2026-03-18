@@ -158,8 +158,8 @@ export default function ScrollElements({ scrollProgress, focusedSection }: Scrol
       <FloatingCard
         x={3} y={6} scale={1.3}
         scrollProgress={scrollProgress} baseZ={12}
-        entryStart={0.38} entryEnd={0.50}
-        exitStart={0.62} exitEnd={0.73}>
+        entryStart={0.03} entryEnd={0.15}
+        exitStart={0.27} exitEnd={0.38}>
         <VideoCard />
       </FloatingCard>
 
@@ -168,8 +168,8 @@ export default function ScrollElements({ scrollProgress, focusedSection }: Scrol
         x={52} y={4} scale={1.55}
         scrollProgress={scrollProgress} baseZ={11}
         sectionId="bilety" focusedSection={focusedSection}
-        entryStart={0.44} entryEnd={0.56}
-        exitStart={0.67} exitEnd={0.78}>
+        entryStart={0.09} entryEnd={0.21}
+        exitStart={0.32} exitEnd={0.43}>
         <TicketsCard />
       </FloatingCard>
 
@@ -178,8 +178,8 @@ export default function ScrollElements({ scrollProgress, focusedSection }: Scrol
         x={56} y={28} scale={1.55}
         scrollProgress={scrollProgress} baseZ={10}
         sectionId="lineup" focusedSection={focusedSection}
-        entryStart={0.50} entryEnd={0.61}
-        exitStart={0.72} exitEnd={0.82}
+        entryStart={0.15} entryEnd={0.26}
+        exitStart={0.37} exitEnd={0.47}
         groupIndex={0} groupSize={3}>
         <ArtistCard />
       </FloatingCard>
@@ -189,8 +189,8 @@ export default function ScrollElements({ scrollProgress, focusedSection }: Scrol
         x={4} y={46} scale={1.55}
         scrollProgress={scrollProgress} baseZ={9}
         sectionId="lineup" focusedSection={focusedSection}
-        entryStart={0.55} entryEnd={0.66}
-        exitStart={0.76} exitEnd={0.86}
+        entryStart={0.20} entryEnd={0.31}
+        exitStart={0.41} exitEnd={0.51}
         groupIndex={1} groupSize={3}>
         <ArtistCard />
       </FloatingCard>
@@ -200,8 +200,8 @@ export default function ScrollElements({ scrollProgress, focusedSection }: Scrol
         x={32} y={60} scale={1.55}
         scrollProgress={scrollProgress} baseZ={9}
         sectionId="lineup" focusedSection={focusedSection}
-        entryStart={0.60} entryEnd={0.71}
-        exitStart={0.80} exitEnd={0.90}
+        entryStart={0.25} entryEnd={0.36}
+        exitStart={0.45} exitEnd={0.55}
         groupIndex={2} groupSize={3}>
         <ArtistCard />
       </FloatingCard>
@@ -211,8 +211,8 @@ export default function ScrollElements({ scrollProgress, focusedSection }: Scrol
         x={54} y={64} scale={1.55}
         scrollProgress={scrollProgress} baseZ={13}
         sectionId="kontakt" focusedSection={focusedSection}
-        entryStart={0.65} entryEnd={0.76}
-        exitStart={0.87} exitEnd={1.0}>
+        entryStart={0.30} entryEnd={0.41}
+        exitStart={0.52} exitEnd={0.65}>
         <ContactCard />
       </FloatingCard>
 
@@ -220,8 +220,8 @@ export default function ScrollElements({ scrollProgress, focusedSection }: Scrol
       <FloatingCard
         x={28} y={38} scale={1}
         scrollProgress={scrollProgress} baseZ={7}
-        entryStart={0.42} entryEnd={0.53}
-        exitStart={0.72} exitEnd={0.82}>
+        entryStart={0.07} entryEnd={0.18}
+        exitStart={0.37} exitEnd={0.47}>
         <div style={{
           fontFamily: 'var(--font-mono)', fontWeight: 400, fontSize: '13px',
           color: 'rgba(164,247,130,0.15)', letterSpacing: '0.22em',
