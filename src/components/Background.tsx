@@ -1,17 +1,18 @@
-'use client'
+"use client";
+
+import Image from "next/image";
 
 export default function Background() {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden">
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: 'url(/images/background.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
+      <Image
+        src="/images/background.jpg"
+        alt=""
+        fill
+        priority
+        quality={85}
+        style={{ objectFit: "cover", objectPosition: "center" }}
       />
     </div>
-  )
+  );
 }

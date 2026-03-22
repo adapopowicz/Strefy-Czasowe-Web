@@ -99,12 +99,13 @@ export default function HomepageContent() {
       >
         Indoorowy festiwal muzyczno-wizualny
         <br />
-        odbywający się w noce zmiany czasu.
+        odbywający się dwa razy do roku
+        <br />w noce zmiany czasu.
       </p>
 
       {/* Countdown */}
       <p
-        className="relative z-10 text-center mt-4"
+        className="relative z-10 text-center mt-12"
         style={{
           fontFamily: "var(--font-mono)",
           fontWeight: 400,
