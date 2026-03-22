@@ -1,62 +1,69 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 // March 28 2026 at 19:00 Warsaw time (CET = UTC+1, before DST change on Mar 29)
-const FESTIVAL_DATE = new Date('2026-03-28T19:00:00+01:00')
+const FESTIVAL_DATE = new Date("2026-03-29T02:00:00+01:00");
 
 function useCountdown(target: Date) {
-  const [t, setT] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+  const [t, setT] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   useEffect(() => {
     function tick() {
-      const diff = target.getTime() - Date.now()
-      if (diff <= 0) return
+      const diff = target.getTime() - Date.now();
+      if (diff <= 0) return;
       setT({
         days: Math.floor(diff / 86400000),
         hours: Math.floor((diff % 86400000) / 3600000),
         minutes: Math.floor((diff % 3600000) / 60000),
         seconds: Math.floor((diff % 60000) / 1000),
-      })
+      });
     }
-    tick()
-    const id = setInterval(tick, 1000)
-    return () => clearInterval(id)
-  }, [target])
-  return t
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, [target]);
+  return t;
 }
 
 export default function HomepageContent() {
-  const { days, hours, minutes, seconds } = useCountdown(FESTIVAL_DATE)
+  const { days, hours, minutes, seconds } = useCountdown(FESTIVAL_DATE);
 
   return (
     <div
       className="relative w-full h-full flex flex-col items-center justify-center"
-      style={{ paddingTop: '60px', paddingBottom: '144px' }}
+      style={{ paddingTop: "60px", paddingBottom: "144px" }}
     >
       {/* Pink ellipse SVG — dome rising from below, behind text */}
-      <img
+      <Image
         src="/images/background_ellipse.svg"
         alt=""
+        width={1200}
+        height={1200}
+        priority
         className="absolute pointer-events-none sm:[clip-path:inset(0_0_15%_0)] md:[clip-path:inset(0_0_30%_0)] lg:[clip-path:inset(0_0_45%_0)] xl:[clip-path:inset(0_0_50%_0)]"
         style={{
-          width: '72vw',
-          left: '50%',
-          top: '6vh',
-          transform: 'translateX(-50%)',
+          width: "72vw",
+          left: "50%",
+          top: "6vh",
+          transform: "translateX(-50%)",
           zIndex: 0,
         }}
       />
 
       {/* Date + location badge — upper right corner */}
-      <img
+      <Image
         src="/images/date_time.svg"
         alt="28.03.2026 · SVERA Gdynia"
+        width={224}
+        height={224}
+        priority
         className="absolute pointer-events-none"
         style={{
-          top: '72px',
-          right: '24px',
-          width: 'clamp(140px, 14vw, 224px)',
-          height: 'auto',
+          top: "72px",
+          right: "24px",
+          width: "clamp(140px, 14vw, 224px)",
+          height: "auto",
           zIndex: 10,
         }}
       />
@@ -65,13 +72,13 @@ export default function HomepageContent() {
       <h1
         className="relative z-10 text-center"
         style={{
-          fontFamily: 'var(--font-display)',
+          fontFamily: "var(--font-display)",
           fontWeight: 400,
-          fontSize: 'clamp(52px, 16.25vw, 234px)',
-          color: '#A4F782',
-          letterSpacing: '-0.01em',
+          fontSize: "clamp(52px, 16.25vw, 234px)",
+          color: "#A4F782",
+          letterSpacing: "-0.01em",
           lineHeight: 0.9,
-          textShadow: '0 0 10px rgba(0,0,0,0.5)',
+          textShadow: "0 0 10px rgba(0,0,0,0.5)",
         }}
       >
         STREFY
@@ -83,10 +90,10 @@ export default function HomepageContent() {
       <p
         className="relative z-10 text-center mt-5"
         style={{
-          fontFamily: 'var(--font-sans)',
+          fontFamily: "var(--font-sans)",
           fontWeight: 400,
-          fontSize: 'clamp(16px, 3.125vw, 45px)',
-          color: '#E8E8E8',
+          fontSize: "clamp(16px, 3.125vw, 45px)",
+          color: "#E8E8E8",
           lineHeight: 0.9,
         }}
       >
@@ -99,20 +106,20 @@ export default function HomepageContent() {
       <p
         className="relative z-10 text-center mt-4"
         style={{
-          fontFamily: 'var(--font-mono)',
+          fontFamily: "var(--font-mono)",
           fontWeight: 400,
-          fontSize: 'clamp(13px, 1.67vw, 24px)',
-          color: '#8B968A',
-          letterSpacing: '0.02em',
+          fontSize: "clamp(13px, 1.67vw, 24px)",
+          color: "#8B968A",
+          letterSpacing: "0.02em",
           lineHeight: 0.9,
         }}
       >
         Do zmiany czasu na letni pozostało
         <br />
-        <span style={{ color: '#A4F782' }}>
+        <span style={{ color: "#A4F782" }}>
           {days} dni {hours} godzin {minutes} minut {seconds} sekund
         </span>
       </p>
     </div>
-  )
+  );
 }

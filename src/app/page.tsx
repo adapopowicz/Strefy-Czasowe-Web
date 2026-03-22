@@ -7,6 +7,7 @@ import Menu from "@/components/Menu";
 import Timeline from "@/components/Timeline";
 import HomepageContent from "@/components/HomepageContent";
 import ScrollElements from "@/components/ScrollElements";
+import SponsorsSection from "@/components/SponsorsSection";
 
 export default function Home() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -59,7 +60,7 @@ export default function Home() {
         className="fixed inset-0 overflow-y-scroll overflow-x-hidden"
         style={{ zIndex: 1 }}
       >
-        <div style={{ height: "300vh" }}>
+        <div style={{ height: "250vh" }}>
           <div
             className="sticky top-0 h-screen w-full"
             style={{ overflow: "visible" }}
@@ -92,6 +93,9 @@ export default function Home() {
               />
             </motion.div>
           </div>
+        </div>
+        <div style={{ position: "relative", zIndex: 10 }}>
+          <SponsorsSection />
         </div>
       </div>
     </>

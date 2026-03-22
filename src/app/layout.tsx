@@ -1,15 +1,20 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Strefy Czasowe',
-  description: 'Indoorowy festiwal muzyczno-wizualny odbywający się w noce zmiany czasu.',
-}
+  title: "Strefy Czasowe 2026 (+1)",
+  description:
+    "Indoorowy festiwal muzyczno-wizualny odbywający się w noce zmiany czasu.",
+};
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="pl">
       <body>{children}</body>
     </html>
-  )
+  );
 }

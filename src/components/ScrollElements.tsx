@@ -411,7 +411,7 @@ export default function ScrollElements({
 
       {/* Artist 7 — right upper */}
       <FloatingCard
-        x={62}
+        x={69}
         y={30}
         scale={1.55}
         scrollProgress={scrollProgress}
@@ -506,10 +506,10 @@ export default function ScrollElements({
         baseZ={13}
         sectionId="kontakt"
         focusedSection={focusedSection}
-        entryStart={0.85}
-        entryEnd={0.9}
-        exitStart={0.93}
-        exitEnd={0.99}
+        entryStart={0.75}
+        entryEnd={0.8}
+        exitStart={0.88}
+        exitEnd={0.85}
       >
         <ContactCard />
       </FloatingCard>
