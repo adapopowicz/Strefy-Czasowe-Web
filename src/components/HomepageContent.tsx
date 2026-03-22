@@ -30,10 +30,7 @@ export default function HomepageContent() {
   const { days, hours, minutes, seconds } = useCountdown(FESTIVAL_DATE);
 
   return (
-    <div
-      className="relative w-full h-full flex flex-col items-center justify-center"
-      style={{ paddingTop: "60px", paddingBottom: "144px" }}
-    >
+    <div className="relative w-full h-full flex flex-col items-center justify-center md:pb-36 mt-15">
       {/* Pink ellipse SVG — dome rising from below, behind text */}
       <Image
         src="/images/background_ellipse.svg"
@@ -41,12 +38,10 @@ export default function HomepageContent() {
         width={1200}
         height={1200}
         priority
-        className="absolute pointer-events-none sm:[clip-path:inset(0_0_15%_0)] md:[clip-path:inset(0_0_30%_0)] lg:[clip-path:inset(0_0_45%_0)] xl:[clip-path:inset(0_0_50%_0)]"
+        className="absolute pointer-events-none top-1/2 -translate-y-1/2 -translate-x-1/2 md:top-[6vh] md:translate-y-0 lg:[clip-path:inset(0_0_45%_0)] xl:[clip-path:inset(0_0_50%_0)]"
         style={{
           width: "72vw",
           left: "50%",
-          top: "6vh",
-          transform: "translateX(-50%)",
           zIndex: 0,
         }}
       />

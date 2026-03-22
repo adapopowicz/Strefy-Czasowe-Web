@@ -149,7 +149,7 @@ function MobileStack() {
         flexDirection: "column",
         alignItems: "center",
         gap: "20px",
-        paddingTop: "72px",
+        paddingTop: "420px",
         paddingBottom: "40px",
         paddingLeft: "16px",
         paddingRight: "16px",
@@ -223,13 +223,16 @@ function MobileStack() {
         />
       </div>
       <div style={{ width: "100%", maxWidth: "400px" }}>
-        <ArtistVideoCard
-          videoSrc="/images/houseofthesun.png"
+        <ArtistCard
+          imageSrc="/images/houseofthesun.png"
           instagramUrl="https://www.instagram.com/p/DWLlT4kCBQa/?img_index=1"
         />
       </div>
       <div style={{ width: "100%", maxWidth: "320px" }}>
         <ContactCard />
+      </div>
+      <div style={{ width: "100%", maxWidth: "400px" }}>
+        <SponsorsSection />
       </div>
     </div>
   );
@@ -242,7 +245,7 @@ export default function ScrollElements({
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
+    const check = () => setIsMobile(window.innerWidth < 1200);
     check();
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);

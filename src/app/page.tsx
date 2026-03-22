@@ -14,11 +14,21 @@ export default function Home() {
   const focusTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { scrollYProgress } = useScroll({ container: scrollRef });
   const [focusedSection, setFocusedSection] = useState<string | null>(null);
+  const [trackHeight, setTrackHeight] = useState("250vh");
 
   // Reset to top on mount (browser scroll restoration doesn't affect custom scroll containers,
   // but this guards against any cached scroll position)
   useEffect(() => {
     if (scrollRef.current) scrollRef.current.scrollTop = 0;
+  }, []);
+
+  useEffect(() => {
+    const update = () => {
+      setTrackHeight(window.innerWidth < 1200 ? "auto" : "250vh");
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
   }, []);
 
   function focusSection(sectionId: string) {
@@ -60,7 +70,7 @@ export default function Home() {
         className="fixed inset-0 overflow-y-scroll overflow-x-hidden"
         style={{ zIndex: 1 }}
       >
-        <div style={{ height: "250vh" }}>
+        <div style={{ height: trackHeight }}>
           <div
             className="sticky top-0 h-screen w-full"
             style={{ overflow: "visible" }}
@@ -96,7 +106,7 @@ export default function Home() {
         </div>
         <div
           style={{ position: "relative", zIndex: 10 }}
-          className="hidden md:block pb-16 md:pb-0"
+          className="hidden lg:block pb-16 md:pb-0"
         >
           <SponsorsSection />
         </div>
