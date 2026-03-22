@@ -1,16 +1,16 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 
 interface MenuProps {
-  onNavClick: (sectionId: string) => void
+  onNavClick: (sectionId: string) => void;
 }
 
 const navItems = [
-  { label: 'BILETY',   sectionId: 'bilety' },
-  { label: 'LINE-UP',  sectionId: 'lineup' },
-  { label: 'KONTAKT',  sectionId: 'kontakt' },
-]
+  { label: "BILETY", sectionId: "bilety" },
+  { label: "LINE-UP", sectionId: "lineup" },
+  { label: "KONTAKT", sectionId: "kontakt" },
+];
 
 export default function Menu({ onNavClick }: MenuProps) {
   return (
@@ -25,25 +25,29 @@ export default function Menu({ onNavClick }: MenuProps) {
           key={item.label}
           onClick={() => onNavClick(item.sectionId)}
           style={{
-            border: 'none',
-            borderRadius: '999px',
-            padding: '4px 14px',
-            fontFamily: 'var(--font-mono)',
-            fontSize: '18px',
+            border: "none",
+            borderRadius: "999px",
+            padding: "clamp(3px, 0.8vw, 6px) clamp(10px, 2vw, 16px)",
+            fontFamily: "var(--font-mono)",
+            fontSize: "clamp(12px, 3.5vw, 18px)",
             fontWeight: 400,
-            letterSpacing: '0.08em',
-            color: '#1A280A',
-            background: '#90A981',
-            cursor: 'pointer',
-            textTransform: 'uppercase',
-            transition: 'background 0.2s',
+            letterSpacing: "0.08em",
+            color: "#1A280A",
+            background: "#90A981",
+            cursor: "pointer",
+            textTransform: "uppercase",
+            transition: "background 0.2s",
           }}
-          onMouseEnter={e => { (e.target as HTMLElement).style.background = '#A4F782' }}
-          onMouseLeave={e => { (e.target as HTMLElement).style.background = '#90A981' }}
+          onMouseEnter={(e) => {
+            (e.target as HTMLElement).style.background = "#A4F782";
+          }}
+          onMouseLeave={(e) => {
+            (e.target as HTMLElement).style.background = "#90A981";
+          }}
         >
           {item.label}
         </button>
       ))}
     </motion.nav>
-  )
+  );
 }

@@ -7,6 +7,7 @@ import TicketsCard from "./cards/TicketsCard";
 import ContactCard from "./cards/ContactCard";
 import ArtistCard from "./cards/ArtistCard";
 import ArtistVideoCard from "./cards/ArtistVideoCard";
+import SponsorsSection from "@/components/SponsorsSection";
 
 // Card lifecycle timing (fractions of scrollYProgress over 320vh track = 220vh actual scroll):
 //
@@ -221,6 +222,12 @@ function MobileStack() {
           instagramUrl="https://www.instagram.com/p/DV_kAA6CDdi/?img_index=1"
         />
       </div>
+      <div style={{ width: "100%", maxWidth: "400px" }}>
+        <ArtistVideoCard
+          videoSrc="/images/houseofthesun.png"
+          instagramUrl="https://www.instagram.com/p/DWLlT4kCBQa/?img_index=1"
+        />
+      </div>
       <div style={{ width: "100%", maxWidth: "320px" }}>
         <ContactCard />
       </div>
@@ -281,7 +288,6 @@ export default function ScrollElements({
       <FloatingCard
         x={56}
         y={28}
-        scale={1.55}
         scrollProgress={scrollProgress}
         baseZ={10}
         sectionId="lineup"
@@ -303,7 +309,6 @@ export default function ScrollElements({
       <FloatingCard
         x={4}
         y={46}
-        scale={1.55}
         scrollProgress={scrollProgress}
         baseZ={9}
         sectionId="lineup"
@@ -325,7 +330,6 @@ export default function ScrollElements({
       <FloatingCard
         x={32}
         y={60}
-        scale={1.55}
         scrollProgress={scrollProgress}
         baseZ={9}
         sectionId="lineup"
@@ -347,7 +351,6 @@ export default function ScrollElements({
       <FloatingCard
         x={60}
         y={50}
-        scale={1.55}
         scrollProgress={scrollProgress}
         baseZ={8}
         sectionId="lineup"
@@ -369,7 +372,6 @@ export default function ScrollElements({
       <FloatingCard
         x={8}
         y={62}
-        scale={1.55}
         scrollProgress={scrollProgress}
         baseZ={8}
         sectionId="lineup"
@@ -391,7 +393,6 @@ export default function ScrollElements({
       <FloatingCard
         x={42}
         y={72}
-        scale={1.55}
         scrollProgress={scrollProgress}
         baseZ={7}
         sectionId="lineup"
@@ -413,7 +414,6 @@ export default function ScrollElements({
       <FloatingCard
         x={69}
         y={30}
-        scale={1.55}
         scrollProgress={scrollProgress}
         baseZ={7}
         sectionId="lineup"
@@ -435,7 +435,6 @@ export default function ScrollElements({
       <FloatingCard
         x={6}
         y={40}
-        scale={1.55}
         scrollProgress={scrollProgress}
         baseZ={6}
         sectionId="lineup"
@@ -457,7 +456,6 @@ export default function ScrollElements({
       <FloatingCard
         x={30}
         y={55}
-        scale={1.55}
         scrollProgress={scrollProgress}
         baseZ={6}
         sectionId="lineup"
@@ -479,7 +477,6 @@ export default function ScrollElements({
       <FloatingCard
         x={55}
         y={65}
-        scale={1.55}
         scrollProgress={scrollProgress}
         baseZ={6}
         sectionId="lineup"
@@ -494,6 +491,26 @@ export default function ScrollElements({
         <ArtistVideoCard
           videoSrc="/images/ptaki.mp4"
           instagramUrl="https://www.instagram.com/p/DV_kAA6CDdi/?img_index=1"
+        />
+      </FloatingCard>
+
+      <FloatingCard
+        x={20}
+        y={45}
+        scrollProgress={scrollProgress}
+        baseZ={6}
+        sectionId="lineup"
+        focusedSection={focusedSection}
+        entryStart={0.65}
+        entryEnd={0.76}
+        exitStart={0.85}
+        exitEnd={0.9}
+        groupIndex={8}
+        groupSize={10}
+      >
+        <ArtistCard
+          imageSrc="/images/houseofthesun.png"
+          instagramUrl="https://www.instagram.com/p/DWLlT4kCBQa/?img_index=1"
         />
       </FloatingCard>
 

@@ -58,7 +58,7 @@ export default function ContactCard() {
             color: "#90A981",
           }}
         >
-          ADA POPOWICZ × SMOOTHSAIL
+          ADA POPOWICZ × SMOOTH SAIL
         </p>
       </div>
     </motion.div>

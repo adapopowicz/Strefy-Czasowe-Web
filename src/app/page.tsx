@@ -94,7 +94,10 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-        <div style={{ position: "relative", zIndex: 10 }}>
+        <div
+          style={{ position: "relative", zIndex: 10 }}
+          className="hidden md:block pb-16 md:pb-0"
+        >
           <SponsorsSection />
         </div>
       </div>
