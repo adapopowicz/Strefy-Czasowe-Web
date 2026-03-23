@@ -206,7 +206,7 @@ function MobileStack() {
       </div>
       <div style={{ width: "100%", maxWidth: "400px" }}>
         <ArtistCard
-          imageSrc="/images/no_nie.jpg"
+          imageSrc="/images/no_nie.png"
           instagramUrl="https://www.instagram.com/p/DVEgZvHiEYv/?img_index=1"
         />
       </div>
@@ -450,7 +450,7 @@ export default function ScrollElements({
         groupSize={10}
       >
         <ArtistCard
-          imageSrc="/images/no_nie.jpg"
+          imageSrc="/images/no_nie.png"
           instagramUrl="https://www.instagram.com/p/DVEgZvHiEYv/?img_index=1"
         />
       </FloatingCard>

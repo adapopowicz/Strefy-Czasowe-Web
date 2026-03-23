@@ -108,7 +108,7 @@ export default function TicketsCard() {
           lineHeight: 1.4,
         }}
       >
-        Kwoty przy zakupie mogą być powiększone o prowizję Operatora.
+        Kwoty przy zakupie są powiększone o prowizję Operatora.
       </p>
 
       <div className="px-4 pb-4">

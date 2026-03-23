@@ -18,7 +18,7 @@ const months = [
   "GRU",
 ];
 
-const BLANK_MONTH = 9; // PAŹ
+const BLANK_MONTH = 9.6; // PAŹ
 
 // Spring festival is March 28 — logo left edge aligns to that exact day on the 365-day scale.
 // Month index 2 (March), day 28, days in March = 31
